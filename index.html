@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESC 2025 Bewertungsbogen</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f7f7f7;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 6px;
+      text-align: center;
+      font-size: 13px;
+    }
+    th {
+      background-color: #ddd;
+    }
+    input[type="number"] {
+      width: 50px;
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 100%;
+    }
+  </style>
+  <script>
+    function calculateTotal(row) {
+      const fields = ['gesang', 'song', 'perf', 'style', 'stage', 'impact'];
+      let total = 0;
+      for (let field of fields) {
+        const val = parseInt(document.getElementById(`${field}-${row}`).value) || 0;
+        total += val;
+      }
+      document.getElementById(`gesamt-${row}`).textContent = total;
+    }
+  </script>
+</head>
+<body>
+
+<h1>ESC 2025 – Bewertungsbogen</h1>
+<h2>Finale – 17. Mai | Malmö</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th><th>Land</th><th>Künstler:in / Song</th>
+      <th>Gesang</th><th>Song</th><th>Performance</th>
+      <th>Styling</th><th>Staging</th><th>Eindruck</th>
+      <th>Gesamt</th><th>Platz</th><th>Punkte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN: Tabelle generiert -->
+    <!-- Kopiere diese Vorlage pro Zeile -->
+
+    <!-- ACTS: -->
+
+<script>
+const acts = [
+  ["🇳🇴", "Kyle Alessandro – Lighter"],
+  ["🇱🇺", "Laura Thorn – La Poupée Monte Le Son"],
+  ["🇪🇪", "Tommy Cash – Espresso Macchiato"],
+  ["🇮🇱", "Yuval Raphael – New Day Will Rise"],
+  ["🇱🇹", "Katarsis – Tavo Akys"],
+  ["🇪🇸", "Melody – ESA DIVA"],
+  ["🇺🇦", "Ziferblat – Bird of Pray"],
+  ["🇬🇧", "Remember Monday – What The Hell Just Happened?"],
+  ["🇦🇹", "JJ – Wasted Love"],
+  ["🇮🇸", "VÆB – RÓA"],
+  ["🇱🇻", "Tautumeitas – Bur Man Laimi"],
+  ["🇳🇱", "Claude – C’est La Vie"],
+  ["🇫🇮", "Erika Vikman – ICH KOMME"],
+  ["🇮🇹", "Lucio Corsi – Volevo Essere Un Duro"],
+  ["🇵🇱", "Justyna Steczkowska – GAJA"],
+  ["🇩🇪", "Abor & Tynna – Baller"],
+  ["🇬🇷", "Klavdia – Asteromáta"],
+  ["🇦🇲", "PARG – SURVIVOR"],
+  ["🇨🇭", "Zoë Më – Voyage"],
+  ["🇲🇹", "Miriana Conte – SERVING"],
+  ["🇵🇹", "NAPA – Deslocado"],
+  ["🇩🇰", "Sissal – Hallucination"],
+  ["🇸🇪", "KAJ – Bara Bada Bastu"],
+  ["🇫🇷", "Louane – maman"],
+  ["🇸🇲", "Gabry Ponte – Tutta L’Italia"],
+  ["🇦🇱", "Shkodra Elektronike – Zjerm"]
+];
+
+let html = "";
+acts.forEach((act, i) => {
+  const row = i + 1;
+  html += `<tr>
+    <td>${row}</td>
+    <td>${act[0]}</td>
+    <td>${act[1]}</td>
+    <td><input type="number" min="0" max="10" id="gesang-${row}" oninput="calculateTotal(${row})"></td>
+    <td><input type="number" min="0" max="10" id="song-${row}" oninput="calculateTotal(${row})"></td>
+    <td><input type="number" min="0" max="10" id="perf-${row}" oninput="calculateTotal(${row})"></td>
+    <td><input type="number" min="0" max="10" id="style-${row}" oninput="calculateTotal(${row})"></td>
+    <td><input type="number" min="0" max="10" id="stage-${row}" oninput="calculateTotal(${row})"></td>
+    <td><input type="number" min="0" max="10" id="impact-${row}" oninput="calculateTotal(${row})"></td>
+    <td id="gesamt-${row}">0</td>
+    <td><input type="text" /></td>
+    <td><input type="number" min="0" max="12" /></td>
+  </tr>`;
+});
+document.write(html);
+</script>
+
+  </tbody>
+</table>
+
+<h2>🎯 Deine Top 10</h2>
+<table>
+  <thead>
+    <tr><th>Platz</th><th>Land / Song</th><th>Punkte</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td><input type="text" /></td><td>12</td></tr>
+    <tr><td>2</td><td><input type="text" /></td><td>10</td></tr>
+    <tr><td>3</td><td><input type="text" /></td><td>8</td></tr>
+    <tr><td>4</td><td><input type="text" /></td><td>7</td></tr>
+    <tr><td>5</td><td><input type="text" /></td><td>6</td></tr>
+    <tr><td>6</td><td><input type="text" /></td><td>5</td></tr>
+    <tr><td>7</td><td><input type="text" /></td><td>4</td></tr>
+    <tr><td>8</td><td><input type="text" /></td><td>3</td></tr>
+    <tr><td>9</td><td><input type="text" /></td><td>2</td></tr>
+    <tr><td>10</td><td><input type="text" /></td><td>1</td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>
