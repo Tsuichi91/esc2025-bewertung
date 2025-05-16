@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ESC Bewertung 2025</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
   <header>
     <h1>ESC Bewertung 2025</h1>
   </header>
   <main>
+    <main id="export-area">
     <div id="acts-container">
       <!-- Beispielhafte Daten zum Start -->
     </div>
@@ -132,6 +134,18 @@
     }
 
     init();
+
+        document.getElementById("export-pdf").addEventListener("click", () => {
+      const element = document.getElementById("export-area");
+      const opt = {
+        margin:       0.5,
+        filename:     'ESC-Bewertung-2025.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(element).save();
+    });
   </script>
 </body>
 </html>
