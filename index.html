@@ -20,119 +20,118 @@
         <!-- Dynamisches Ranking -->
       </ol>
     </section>
-    <button id="export-pdf">PDF Export</button>
   </main>
 
+ 
   <script>
     const acts = [
-      { land: "Norwegen", künstler: "Kyle Alessandro", song: "Lighter", flagge: "🇳🇴" },
-      { land: "Luxemburg", künstler: "Laura Thorn", song: "La Poupée Monte Le Son", flagge: "🇱🇺" },
-      { land: "Estland", künstler: "Tommy Cash", song: "Espresso Macchiato", flagge: "🇪🇪" },
-      { land: "Israel", künstler: "Yuval Raphael", song: "New Day Will Rise", flagge: "🇮🇱" },
-      { land: "Litauen", künstler: "Katarsis", song: "Tavo Akys", flagge: "🇱🇹" },
-      { land: "Spanien", künstler: "Melody", song: "ESA DIVA", flagge: "🇪🇸" },
-      { land: "Ukraine", künstler: "Ziferblat", song: "Bird of Pray", flagge: "🇺🇦" },
-      { land: "Vereinigtes Königreich", künstler: "Remember Monday", song: "What The Hell Just Happened?", flagge: "🇬🇧" },
-      { land: "Österreich", künstler: "JJ", song: "Wasted Love", flagge: "🇦🇹" },
-      { land: "Island", künstler: "VÆB", song: "RÓA", flagge: "🇮🇸" },
-      { land: "Lettland", künstler: "Tautumeitas", song: "Bur Man Laimi", flagge: "🇱🇻" },
-      { land: "Niederlande", künstler: "Claude", song: "C’est La Vie", flagge: "🇳🇱" },
-      { land: "Finnland", künstler: "Erika Vikman", song: "ICH KOMME", flagge: "🇫🇮" },
-      { land: "Italien", künstler: "Lucio Corsi", song: "Volevo Essere Un Duro", flagge: "🇮🇹" },
-      { land: "Polen", künstler: "Justyna Steczkowska", song: "GAJA", flagge: "🇵🇱" },
-      { land: "Deutschland", künstler: "Abor & Tynna", song: "Baller", flagge: "🇩🇪" },
-      { land: "Griechenland", künstler: "Klavdia", song: "Asteromáta", flagge: "🇬🇷" },
-      { land: "Armenien", künstler: "PARG", song: "SURVIVOR", flagge: "🇦🇲" },
-      { land: "Schweiz", künstler: "Zoë Më", song: "Voyage", flagge: "🇨🇭" },
-      { land: "Malta", künstler: "Miriana Conte", song: "SERVING", flagge: "🇲🇹" },
-      { land: "Portugal", künstler: "NAPA", song: "Deslocado", flagge: "🇵🇹" },
-      { land: "Dänemark", künstler: "Sissal", song: "Hallucination", flagge: "🇩🇰" },
-      { land: "Schweden", künstler: "KAJ", song: "Bara Bada Bastu", flagge: "🇸🇪" },
-      { land: "Frankreich", künstler: "Louane", song: "maman", flagge: "🇫🇷" },
-      { land: "San Marino", künstler: "Gabry Ponte", song: "Tutta L’Italia", flagge: "🇸🇲" },
-      { land: "Albanien", künstler: "Shkodra Elektronike", song: "Zjerm", flagge: "🇦🇱" }
-    ];
+  { land: "Norwegen", künstler: "Kyle Alessandro", song: "Lighter", flagge: "🇳🇴" },
+  { land: "Luxemburg", künstler: "Laura Thorn", song: "La Poupée Monte Le Son", flagge: "🇱🇺" },
+  { land: "Estland", künstler: "Tommy Cash", song: "Espresso Macchiato", flagge: "🇪🇪" },
+  { land: "Israel", künstler: "Yuval Raphael", song: "New Day Will Rise", flagge: "🇮🇱" },
+  { land: "Litauen", künstler: "Katarsis", song: "Tavo Akys", flagge: "🇱🇹" },
+  { land: "Spanien", künstler: "Melody", song: "ESA DIVA", flagge: "🇪🇸" },
+  { land: "Ukraine", künstler: "Ziferblat", song: "Bird of Pray", flagge: "🇺🇦" },
+  { land: "Vereinigtes Königreich", künstler: "Remember Monday", song: "What The Hell Just Happened?", flagge: "🇬🇧" },
+  { land: "Österreich", künstler: "JJ", song: "Wasted Love", flagge: "🇦🇹" },
+  { land: "Island", künstler: "VÆB", song: "RÓA", flagge: "🇮🇸" },
+  { land: "Lettland", künstler: "Tautumeitas", song: "Bur Man Laimi", flagge: "🇱🇻" },
+  { land: "Niederlande", künstler: "Claude", song: "C’est La Vie", flagge: "🇳🇱" },
+  { land: "Finnland", künstler: "Erika Vikman", song: "ICH KOMME", flagge: "🇫🇮" },
+  { land: "Italien", künstler: "Lucio Corsi", song: "Volevo Essere Un Duro", flagge: "🇮🇹" },
+  { land: "Polen", künstler: "Justyna Steczkowska", song: "GAJA", flagge: "🇵🇱" },
+  { land: "Deutschland", künstler: "Abor & Tynna", song: "Baller", flagge: "🇩🇪" },
+  { land: "Griechenland", künstler: "Klavdia", song: "Asteromáta", flagge: "🇬🇷" },
+  { land: "Armenien", künstler: "PARG", song: "SURVIVOR", flagge: "🇦🇲" },
+  { land: "Schweiz", künstler: "Zoë Më", song: "Voyage", flagge: "🇨🇭" },
+  { land: "Malta", künstler: "Miriana Conte", song: "SERVING", flagge: "🇲🇹" },
+  { land: "Portugal", künstler: "NAPA", song: "Deslocado", flagge: "🇵🇹" },
+  { land: "Dänemark", künstler: "Sissal", song: "Hallucination", flagge: "🇩🇰" },
+  { land: "Schweden", künstler: "KAJ", song: "Bara Bada Bastu", flagge: "🇸🇪" },
+  { land: "Frankreich", künstler: "Louane", song: "maman", flagge: "🇫🇷" },
+  { land: "San Marino", künstler: "Gabry Ponte", song: "Tutta L’Italia", flagge: "🇸🇲" },
+  { land: "Albanien", künstler: "Shkodra Elektronike", song: "Zjerm", flagge: "🇦🇱" }
+];
 
-    const criteria = ["gesang", "song", "performance", "styling", "staging", "eindruck"];
+const criteria = ["gesang", "song", "performance", "styling", "staging", "eindruck"];
 
-    function createActRow(act, index) {
-      const container = document.createElement("div");
-      container.className = "act";
-      container.dataset.index = index;
-      container.innerHTML = `
-        <h3>${act.flagge} ${act.land} – ${act.künstler} / ${act.song}</h3>
-        <div class="inputs">
-          ${criteria.map(crit => `
-            <label>${crit.charAt(0).toUpperCase() + crit.slice(1)}:
-              <input type="number" min="0" max="10" value="0" data-crit="${crit}" />
-            </label>
-          `).join("")}
-          <p>Gesamt: <span class="gesamt">0</span> / 60</p>
-          <p>Dein Platz: <span class="platz">–</span></p>
-          <label>Punkte (1–12):
-            <input type="number" min="0" max="12" class="esc-punkte" />
-          </label>
-        </div>
-      `;
-      return container;
-    }
+function createActRow(act, index) {
+  const container = document.createElement("div");
+  container.className = "act";
+  container.dataset.index = index;
+  container.innerHTML = `
+    <h3>${act.flagge} ${act.land} – ${act.künstler} / ${act.song}</h3>
+    <div class="inputs">
+      ${criteria.map(crit => `
+        <label>${crit.charAt(0).toUpperCase() + crit.slice(1)}:
+          <input type="number" min="0" max="10" value="0" data-crit="${crit}" />
+        </label>
+      `).join("")}
+      <p>Gesamt: <span class="gesamt">0</span> / 60</p>
+      <p>Dein Platz: <span class="platz">–</span></p>
+      <label>Punkte (1–12):
+        <input type="number" min="0" max="12" class="esc-punkte" />
+      </label>
+    </div>
+  `;
+  return container;
+}
 
-    function updateAllGesamt() {
-      const actElements = document.querySelectorAll(".act");
-      const results = [];
+function updateAllGesamt() {
+  const actElements = document.querySelectorAll(".act");
+  const results = [];
 
-      actElements.forEach((actEl, index) => {
-        let gesamt = 0;
-        const inputs = actEl.querySelectorAll("input[data-crit]");
-        inputs.forEach(input => {
-          gesamt += parseInt(input.value) || 0;
-        });
-        actEl.querySelector(".gesamt").textContent = gesamt;
-        results.push({ index, gesamt, element: actEl });
-      });
-
-      results.sort((a, b) => b.gesamt - a.gesamt);
-      results.forEach((res, i) => {
-        res.element.querySelector(".platz").textContent = i + 1;
-      });
-    }
-
-    function updateRanking() {
-      const rankingList = document.getElementById("esc-ranking");
-      rankingList.innerHTML = "";
-
-      const actElements = Array.from(document.querySelectorAll(".act"));
-      const pointsData = actElements.map((el, i) => {
-        const points = parseInt(el.querySelector(".esc-punkte").value) || 0;
-        return { index: i, points, label: el.querySelector("h3").textContent };
-      });
-
-      pointsData.sort((a, b) => b.points - a.points);
-      pointsData.forEach(entry => {
-        const li = document.createElement("li");
-        li.textContent = `${entry.label} – ${entry.points} Punkte`;
-        rankingList.appendChild(li);
-      });
-    }
-
-    function init() {
-      const container = document.getElementById("acts-container");
-      acts.forEach((act, i) => {
-        const row = createActRow(act, i);
-        container.appendChild(row);
-      });
-
-      document.addEventListener("input", e => {
-        if (e.target.matches("input[data-crit]")) {
-          updateAllGesamt();
-        } else if (e.target.matches(".esc-punkte")) {
-          updateRanking();
-        }
-      });
-    }
-
-    init();
+  actElements.forEach((actEl, index) => {
+    let gesamt = 0;
+    const inputs = actEl.querySelectorAll("input[data-crit]");
+    inputs.forEach(input => {
+      gesamt += parseInt(input.value) || 0;
     });
+    actEl.querySelector(".gesamt").textContent = gesamt;
+    results.push({ index, gesamt, element: actEl });
+  });
+
+  results.sort((a, b) => b.gesamt - a.gesamt);
+  results.forEach((res, i) => {
+    res.element.querySelector(".platz").textContent = i + 1;
+  });
+}
+
+function updateRanking() {
+  const rankingList = document.getElementById("esc-ranking");
+  rankingList.innerHTML = "";
+
+  const actElements = Array.from(document.querySelectorAll(".act"));
+  const pointsData = actElements.map((el, i) => {
+    const points = parseInt(el.querySelector(".esc-punkte").value) || 0;
+    return { index: i, points, label: el.querySelector("h3").textContent };
+  });
+
+  pointsData.sort((a, b) => b.points - a.points);
+  pointsData.forEach(entry => {
+    const li = document.createElement("li");
+    li.textContent = `${entry.label} – ${entry.points} Punkte`;
+    rankingList.appendChild(li);
+  });
+}
+
+function init() {
+  const container = document.getElementById("acts-container");
+  acts.forEach((act, i) => {
+    const row = createActRow(act, i);
+    container.appendChild(row);
+  });
+
+  document.addEventListener("input", e => {
+    if (e.target.matches("input[data-crit]")) {
+      updateAllGesamt();
+    } else if (e.target.matches(".esc-punkte")) {
+      updateRanking();
+    }
+  });
+}
+
+init();
   </script>
 </body>
 </html>
